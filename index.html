@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <p><span>B</span>havik.</p>
+            </div>
+            <div class="rightsection" id="sidemenu">
+                <p class="links present-link" id="home"><a href="#header">Home</a></p>
+                <p class="links" id="about"><a href="#aboutt">About</a></p>
+                <p class="links" id="services"><a href="#servicess">Services</a></p>
+                <p class="links" id="portfolio"><a href="#portfolioo">Portfolio</a></p>
+                <p class="links" id="contact"><a href="#contactt">Contact</a></p>
+                <i class="fa-solid fa-x" onclick="closemenu()"></i>
+            </div>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+
+
+        </div>
+        <div class="home">
+            <div class="left-home">
+                <h1>Web Developer</h1>
+                <h3>Hi, I am Bhavik Kela</h3>
+                <h3>From <span class="orange">In</span>di<span class="green">a</span></h3>
+            </div>
+            <div class="right-home">
+            </div>
+        </div>
+        <div class="about">
+            <div class="photo"></div>
+
+            <div class="rightarea">
+                <h1 id="aboutt">About Us</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur, alias dolorem delectus
+                    corrupti, eius nobis ipsum doloremque quis ea, obcaecati ex ut cum! Sunt ipsa inventore rem natus
+                    tenetur animi explicabo. Voluptatem nam laudantium eaque laborum nisi voluptatum ullam quod! Minima
+                    voluptas doloribus, adipisci esse voluptatum minus modi?</p>
+                <div class="tabs">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Developer</span><br>Designing web/app interfaces</li>
+                            <li class="deep-1"><span>Arduino Controller</span><br>Programming projects over Arduino</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents nalla" id="experience">
+                        <ul>
+                            <li><span>2021-Current</span><br>Web developer at Amazon</li>
+                            <li class="deep-2"><span>2019-2021</span><br>Team lead at Flipkart</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>School</span><br>The Indian Public School-1st to 12th</li>
+                            <li class="deep-3"><span>B.Tech-College</span><br>SRM Institute of Technology</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="services" id="servicess">
+            <div>
+                <h1>My Services</h1>
+                <div class="services-list">
+                    <div class="services-list1">
+                        <h2 class="services">Web Design</h2>
+                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nesciunt et
+                            facilis rerum, vero dolorum architecto atque officia voluptate, quia ut aut enim!</p>
+                    </div>
+                    <div class="services-list2">
+                        <h2 class="services">Arduino Controls</h2>
+                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur mollitia
+                            facilis molestias recusandae, illo qui cumque corrupti. Itaque eos deleniti ad maxime magni?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio" id="portfolioo">
+            <div class="my-works">
+                <h2>My Works</h2>
+            </div>
+            <div class="shitt">
+                <div class="my-work">
+                    <img class="pehlaa" src="work1.jpg" alt="">
+                    <h3 class="bhai">Web developer</h3>
+                    <p class="pehlaa-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti tempore
+                        quasi fugit, libero pariatur reprehenderit necessitatibus aliquam quo quidem laborum,
+                        praesentium ullam temporibus!</p>
+                    <a href=""><i class="fa-solid fa-arrow-up-right-from-square" id="hello"></i></a>
+                </div>
+                <div class="my-work">
+                    <div class="bhaiii"><img class="dusraa" src="work2.jpg" alt=""></div>
+                    <h3 class="bhaii">Arduino Controller</h3>
+                    <p class="dusraa-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eos
+                        libero officia, atque ullam est itaque veniam tempora neque expedita cum dolore perferendis!</p>
+                    <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+            </div>
+            <div class="see-more"><button><a href="http://google.com">See More</a></button>
+            </div>
+            <div class="contact">
+                <h1>Contact Me</h1>
+                <input type="text" name="name" placeholder="Your Name">
+            </div>
+            <div class="mail">
+                <i class="fa-solid fa-paper-plane"></i> contact@example.com
+                <input type="text" placeholder=" Your Email" name="email">
+            </div>
+            <div class="iconss" id="contactt">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <input type="text" placeholder="Your Message" name="Message">
+            </div>
+            <div class="submit"><button class="abe"><a href="">SUBMIT</a></button></div>
+
+
+            <script>
+                var tablinks = document.getElementsByClassName("tab-links");
+                var tabcontents = document.getElementsByClassName("tab-contents");
+
+                function opentab(tabname) {
+                    for (tablink of tablinks) {
+                        tablink.classList.remove("active-link");
+                    }
+                    for (tabcontent of tabcontents) {
+                        tabcontent.classList.remove("active-tab");
+                    }
+                    event.currentTarget.classList.add("active-link");
+                    document.getElementById(tabname).classList.add("active-tab");
+                }
+            </script>
+            <script>
+                var sidemenu = document.getElementById("sidemenu");
+
+                function openmenu() {
+                    sidemenu.style.right = "0";
+
+                }
+                function closemenu() {
+                    sidemenu.style.right = "-650px";
+                }
+            </script>
+            
+</body>
+<footer>
+    Copyright <i class="fa-solid fa-copyright" id="undo"></i> Bhavik || Made to Learn
+</footer>
+
+</html>

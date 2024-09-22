@@ -1,0 +1,694 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: black;
+    color: whitesmoke;
+}
+.header{
+    width: 100%;
+    height: 100px;
+    margin-left: 200px;
+
+    
+}
+.navbar{
+    display: flex;
+    justify-content:space-between;
+    width:1000px;
+    height: 55px;
+
+}
+.rightsection{
+    display:flex;
+    margin-top: 20px;
+    margin-left: 600px;
+    
+
+}
+.rightsection p{
+    justify-content: space-evenly;
+    width: 100px;
+    
+
+}
+.rightsection a{
+    text-decoration: none;
+    color: white;
+
+}
+.logo span{
+    color: red;
+    font-size: 75px;
+    
+}.logo p{
+    font-size: 50px;
+}
+.logo{
+    width:50%;
+    margin-left: 100px; 
+}
+.home{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height:600px;
+    padding:0px
+}
+.left-home{
+    margin-top: 200px;
+    padding: 30px;
+    margin-left: 55px;
+}
+.right-home{
+    background-image: url("black.jpg");
+    width: 600px;
+    height: 100%;
+    background-attachment: fixed;
+    min-height: 500px;
+    margin-bottom: 100px;
+    background-size: contain;
+
+    
+}
+.left-home h1{
+    color: #ff004f;
+    font-size: 30px;
+    margin-left: 25px;
+}
+.left-home h3{
+    font-weight: 600;
+    font-size: 25px;
+    margin-left: 25px;
+}
+.orange{
+    color: orange;
+}
+.green{
+    color: green;
+}
+
+h2{
+    font-weight: 1000;
+    font-size: 30px;
+    color: pink;
+}
+.about{
+    display: flex;
+    margin-top: 23vh;
+    width: 100%;
+}
+.photo{
+    background-image: url('about.jpg');
+    border-radius: 15px;
+    height: 350px;
+    width: 800px;
+    background-repeat: no-repeat;
+    margin-left: 100px;
+    border-radius: 15px;
+    background-size: cover;
+    margin-bottom: 50px;
+}
+.rightarea{
+    flex-wrap: wrap;
+    margin-left: 35px;
+}
+.tabs{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 60px ;
+
+}
+.tab-links{
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left:0;
+    bottom: -8px;
+    transition: 0.75s;
+
+}
+.tab-links.active-link::after{
+    width: 100%;
+}
+.tab-content{
+    display: flex;
+    
+    margin-top: 30px;
+}
+.tab-contents ul li span{
+    color: #ff004f;
+}.tab-contents{
+    
+    display: none;
+    margin-top: 30px;
+}
+.tab-contents.active-tab{
+    display:block;
+    
+}
+#skills{
+    margin-left: 140px;
+
+}
+#experience{
+    margin-left: 450px;
+}
+#education{
+    margin-left: 750px;
+}
+.deep-1{
+    margin-top: 15px;
+}
+.deep-2{
+    margin-top: 15px;
+}
+.deep-3{
+    margin-top: 15px;
+}
+
+.services{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.services{
+    color: white;
+}
+.services-list{
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    justify-content: space-between;
+}
+.services-list1{
+    
+    border: 3px solid grey;
+    border-radius: 15px;
+    background-color: #262626;
+    height:200px ;
+    will-change: transform;
+    transition: transform 250ms;
+    margin-right: 30px;
+}
+.text{
+    margin-left: 30px;
+    margin-top: 8px;
+}
+.services-list2{
+    
+    border: 3px solid grey;
+    border-radius: 15px;
+    background-color: #262626;
+    height:200px ;
+    margin-left: 30px;
+    margin-right: 30px;
+    will-change: transform;
+    transition: transform 250ms;
+}
+.services-list1:hover{
+    background-color: #ff004f;
+    transition: 1s;
+    transition: transform 125ms;
+    transform: translateY(+15px);
+    cursor: pointer;
+}
+.services-list2:hover{
+    background-color: #ff004f;
+    transition: 1s;
+    transition: transform 125ms;
+    transform: translateY(+15px);
+    cursor: pointer;
+   
+}
+.my-works h2{
+    color: whitesmoke;
+    margin-left: 20px;
+    margin-top: 45px;
+}
+.my-works{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    justify-content: space-between;
+    width:100%;
+
+    
+
+}
+.my-work{
+    width:90%;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+.shitt{
+    display: flex;
+    width: 100%;
+}
+.pehlaa{
+    height: 300px;
+    margin-left: 45px;
+    width: 670px;
+    border-radius: 15px;
+    margin-right: 30px;
+
+}
+.dusraa{
+    height: 300px;
+    width: 670px;
+    border-radius: 15px;
+    margin-left: 30px;
+}
+.bhai{
+    margin-left: 45px;
+    margin-top: 20px;
+}
+.bhaii{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.pehlaa-content{
+    margin-left: 45px;
+    width: 80%;
+    height: 60px;
+}
+.dusraa-content{
+    width: 80%;
+    margin-left: 30px;
+
+}
+.my-work i{
+    margin-left: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.my-work:hover{
+    transform: scale(1.001);
+    transition: 0.5s;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+}
+#hello{
+    margin-left: 45px;
+    text-decoration: none;
+    color: black;
+}
+.my-work h3{
+    color: black;
+}
+.my-work p{
+    color: black;
+}
+button{
+    margin-top: 40px;
+    margin-left: 735px;
+    color: white;
+    background-color: black;
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1.5px solid #ff004f;
+
+}
+.see-more a{
+    text-decoration: none;
+    color: white;
+}
+.contact h1{
+    margin-top: 80px;
+    margin-left: 170px;
+
+}
+.contact{
+    display: flex;
+    font-weight: 700;
+    font-size: 22px;
+}
+.contact input{
+    background-color: rgb(43, 41, 41);
+    height: 40px;
+    width: 700px;
+    margin-top: 83px;
+    margin-left: 200px;
+    border: #262626;
+}
+
+.iconss input{
+    margin-left: 265px;
+    background-color: rgb(43, 41, 41);
+    width: 700px;
+    height: 250px;
+    border: #262626;
+
+}
+    
+    
+
+::placeholder{
+    color: white;
+    padding: 10px;
+    text-align: start;
+    left: 0;
+    top: 0;
+}
+.mail{
+    margin-left: 170px;
+    margin-top: 50px;
+    font-size: 20px;
+}
+.mail i{
+    color: #ff004f;
+}
+.mail input{
+    background-color: rgb(43, 41, 41);
+    height: 40px;
+    width: 700px;
+    margin-left: 200px;
+    border: #262626;
+}
+.iconss{
+    margin-top: 50px;
+    margin-left: 190px;
+}
+.iconss i{
+    font-size: 35px;
+}
+.iconss textarea{
+        background-color: rgb(43, 41, 41);
+        height: 200px;
+        width: 700px;
+        margin-left: 265px;
+        border: #262626;
+        margin-bottom: 50px;
+        padding: 10px;
+        color: whitesmoke;
+        margin-bottom:15px;
+
+}
+.abe{
+    background-color: #ff004f;
+    border: 2px solid black;
+    color: black;
+    font-weight: 400;
+}
+footer{
+    height: 70px;
+    background-color: rgb(65, 51, 32);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+footer i{
+    font-size: 20px;
+    font-weight: bold;
+}
+#undo{
+    margin-top: 25px;
+}
+i.fa-bars{
+    display: none;
+}
+i.fa-x{
+    display: none;
+}
+.submit a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width:950px){
+    
+    
+
+    .navbar.logo p{
+        font-size: 5px;
+    }
+    i.fa-bars{
+        display: block;
+        margin-top: 22px;
+        
+    }
+    i.fa-x{
+        display: block;
+        margin-top: 2px;
+        left: 10px;
+    }
+    .rightsection{
+        background: #ff004f;
+        top: 0;
+        right: 650;
+        position: fixed;
+        width: 200px;
+        height: 83vh;
+        padding-top: 50px;
+        transition: right 0.5s;
+        display: block;
+        
+     }
+     
+     
+    
+     #about{
+        margin-top: 10px;
+        margin-left: 19px;
+     }
+     #services{
+        margin-top: 10px;
+        margin-left: 19px;
+     }
+     #portfolio{
+        margin-top: 10px;
+        margin-left: 19px;
+     }
+     #contact{
+        margin-top: 10px;
+        margin-left: 19px;
+     }
+     #home{
+        margin-left: 19px;
+     }
+     i.fa-x{
+         position: absolute;
+         top: 0px;
+         right: 60px;
+         font-size: 25px;
+         cursor: pointer;
+     }
+     .right-home{
+        width: 100%;
+     }
+     .about{
+        padding: 0px;
+     }
+     .tabs{
+        font-size: 10px;
+    }
+    .my-works{
+        margin-top: 30px;
+    }
+    .services-list{
+        display: block;
+    }
+    .services-list1{
+        height: 250px;
+        width: 300px;
+    }
+    .services-list2{
+        height: 250px;
+        margin-top: 30px;
+        width: 300px;
+        padding: 0;
+        margin-left: 0;
+    }
+    .services-list1 h2{
+        font-size: 18px;
+    }
+    .rightarea p{
+        margin-left: 0px;
+    }
+    .contact h1{
+        margin-left: 0;
+        font-size: 40px;
+    }
+    .photo{
+        width:250px;
+        height: 300px;
+        top: -100px;
+        margin-left: 60px;
+    }
+    .tab-contents.active-tab{
+        margin-left: 0px;
+    }
+    .contact{
+        display: block;
+        margin-top: -110px;
+        margin-left: 10px;
+    }
+    .contact input{
+        margin-left: 0px;
+        width: 200px;
+        margin-top: 10px;
+    }
+    .shitt{
+        display: block;
+    }
+    .my-work img{
+        width:250px;
+    }
+    .my-work.pehlaa{
+        height: 400px;
+    }
+    .pehlaa-content{
+        height: 150px;
+    }
+    .about{
+       
+        width: 350px;
+        height: 900px;
+        margin-top: -12px;
+        background-repeat: no-repeat;
+        display: block;
+    }
+    .rightarea{
+        margin-left: 0px;
+    }
+    .rightarea p{
+        margin-left: 10px;
+        margin-top: 25px;
+    }
+    #skills{
+        margin-left: 40px;
+    
+    }
+    #experience{
+        margin-left: 40px;
+    }
+    #education{
+        margin-left: 40px;
+    }
+    .navbar{
+        width: 300px;
+    }
+    .mail i{
+        font-size: 40px;
+     }
+     .mail{
+         font-size: 25px;
+         margin-left: 3px;
+     }
+     .mail input{
+         margin-left: 10px;
+         margin-top: 10px;
+         width: 300px;
+     }
+     .iconss i{
+         font-size: 25px;
+         margin-top: 55px;
+     }
+     .iconss textarea{
+         margin-left: 0px;
+         margin-top: 20px;
+         width: 200px;
+     }
+     .logo{
+        margin-left: 20px;
+     }
+     .home{
+        height: 600px;
+     }
+     .right-home{
+        display: none;
+     }
+     .home{
+        background-image: url("black.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+     }
+     .left-home{
+        margin-top: 300px;
+        margin-left: 0px;
+
+     }
+     .left-home h1{
+        margin-left: 0px;
+     }
+     .left-home h3{
+        margin-left: 0px;
+     }
+     
+     
+     
+     .about{
+        width: 300px;
+     }
+     .services-list1 {
+        height: 250px;
+        width: 288px;
+     }
+     .services-list2 {
+        height: 250px;
+        width: 288px;
+     }
+     footer{
+        margin-left: 0px;
+        text-align: center;
+        width: 100%;
+     }
+    
+     
+     button{
+        margin-left: 120px;
+        color: black;
+        border: 2px solid black;
+     }
+     .see-more button{
+        margin-top: 70px;
+        color: #262626;
+        background-color: #ff004f;
+        border: 2px solid #ff004f;
+     }
+     .contact{
+        margin-top: 100px;
+     }
+     .iconss input{
+        margin-top: 15px;
+        margin-left: 3px;
+        width: 300px;
+        height: 400px;
+     }
+     .iconss{
+        margin-left: 0px;
+     }
+     .home{
+        margin-top: 50px;
+     }
+    
+    
+     }
+    
+    
+        
+    
