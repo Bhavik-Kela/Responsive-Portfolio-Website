@@ -1,5 +1,5 @@
-var tablinks = document.getElementsByClassName("tab-links");
-                var tabcontents = document.getElementsByClassName("tab-contents");
+let tablinks = document.getElementsByClassName("tab-links");
+let tabcontents = document.getElementsByClassName("tab-contents");
 
                 function opentab(tabname) {
                     for (tablink of tablinks) {
@@ -12,12 +12,19 @@ var tablinks = document.getElementsByClassName("tab-links");
                     document.getElementById(tabname).classList.add("active-tab");
                 }
             
-                var sidemenu = document.getElementById("sidemenu");
+                let sidemenu = document.getElementById("sidemenu");
 
                 function openmenu() {
                     sidemenu.style.right = "0";
+        
 
                 }
                 function closemenu() {
-                    sidemenu.style.right = "-650px";
+                    sidemenu.style.right = "-1200px";
                 }
+                const links = sidemenu.querySelectorAll('a');
+                links.forEach(link => {
+                    link.addEventListener('click', (event) => {
+                        closemenu()
+                    })
+                })
