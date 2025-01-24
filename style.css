@@ -68,16 +68,23 @@ body{
     margin-left: 55px;
 }
 .right-home{
-    background-image: url("black.jpg");
-    width: 600px;
-    height: 100%;
-    background-attachment: fixed;
+    background-image: url("WhatsApp_Image_2024-10-26_at_14.48.31_f37bccec-removebg-preview.png");
+    width: 340px;
+    height: 100vh;
     min-height: 500px;
     margin-bottom: 100px;
     background-size: contain;
+    background-attachment: fixed;
+    overflow: hidden;
+    margin-top: 50px;
 
     
+   
 }
+.deep-4{
+    margin-top: 20px;
+}
+
 .left-home h1{
     color: #ff004f;
     font-size: 30px;
@@ -148,6 +155,7 @@ h2{
 }
 .tab-content{
     display: flex;
+    height: 30vh;
     
     margin-top: 30px;
 }
@@ -183,11 +191,12 @@ h2{
 }
 
 .services{
-    margin-top: 30px;
+    margin-top: 15vh;
     margin-left: 30px;
 }
 .services{
     color: white;
+    margin-top: 10px;
 }
 .services-list{
     display: flex;
@@ -200,25 +209,37 @@ h2{
     border: 3px solid grey;
     border-radius: 15px;
     background-color: #262626;
-    height:200px ;
+    height:500px ;
     will-change: transform;
     transition: transform 250ms;
     margin-right: 30px;
+    width: 600px;
 }
+.services-list1 img{
+    padding: 30px;
+}
+    
 .text{
     margin-left: 30px;
     margin-top: 8px;
+}
+.my-work i{
+    margin-top: 50px;
 }
 .services-list2{
     
     border: 3px solid grey;
     border-radius: 15px;
     background-color: #262626;
-    height:200px ;
+    height:500px ;
     margin-left: 30px;
     margin-right: 30px;
     will-change: transform;
     transition: transform 250ms;
+    width: 600px;
+}
+.services-list2 img{
+    padding: 30px;
 }
 .services-list1:hover{
     background-color: #ff004f;
@@ -247,8 +268,6 @@ h2{
     justify-content: space-between;
     width:100%;
 
-    
-
 }
 .my-work{
     width:90%;
@@ -258,6 +277,8 @@ h2{
 .shitt{
     display: flex;
     width: 100%;
+    
+
 }
 .pehlaa{
     height: 300px;
@@ -432,7 +453,19 @@ i.fa-x{
     text-decoration: none;
     color: black;
 }
-
+.left-home i{
+    margin-top: 50px;
+    font-size: 50px;
+    padding: 25px;
+    text-decoration: none;
+    color: aliceblue;
+}
+.left-home i:hover{
+    cursor: pointer;
+}
+.f{
+    color: #ff004f;
+}
 
 
 
@@ -459,32 +492,40 @@ i.fa-x{
     .rightsection{
         background: #ff004f;
         top: 0;
-        right: 650;
+        right: 1200px;
         position: fixed;
-        width: 200px;
-        height: 83vh;
+        width: 300px;
+        height: 100vh;
         padding-top: 50px;
-        transition: right 0.5s;
+        transition:  0.75s;
         display: block;
         
+     }
+     .right-home{
+        display: none;
+     }
+     .home{
+        background-image: url("WhatsApp_Image_2024-10-26_at_14.48.31_f37bccec-removebg-preview.png");
+        margin-top: 20px;
+        background-repeat: no-repeat;
      }
      
      
     
      #about{
-        margin-top: 10px;
+        margin-top: 20px;
         margin-left: 19px;
      }
      #services{
-        margin-top: 10px;
+        margin-top: 20px;
         margin-left: 19px;
      }
      #portfolio{
-        margin-top: 10px;
+        margin-top: 20px;
         margin-left: 19px;
      }
      #contact{
-        margin-top: 10px;
+        margin-top: 20px;
         margin-left: 19px;
      }
      #home{
@@ -497,24 +538,27 @@ i.fa-x{
          font-size: 25px;
          cursor: pointer;
      }
-     .right-home{
-        width: 100%;
-     }
+     
      .about{
         padding: 0px;
+        
      }
      .tabs{
         font-size: 10px;
     }
+    
+    #portfolioo{
+        margin-top: 0px;
+    }
     .my-works{
-        margin-top: 30px;
+        margin-top: 00px;
     }
     .services-list{
         display: block;
     }
     .services-list1{
-        height: 250px;
-        width: 300px;
+        height: 600px;
+        width: 200px;
     }
     .services-list2{
         height: 250px;
@@ -525,6 +569,7 @@ i.fa-x{
     }
     .services-list1 h2{
         font-size: 18px;
+        margin-top: 3px;
     }
     .rightarea p{
         margin-left: 0px;
@@ -554,6 +599,7 @@ i.fa-x{
     }
     .shitt{
         display: block;
+        margin-top: 50px;
     }
     .my-work img{
         width:250px;
@@ -619,16 +665,10 @@ i.fa-x{
      .home{
         height: 600px;
      }
-     .right-home{
-        display: none;
-     }
-     .home{
-        background-image: url("black.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-     }
+     
+     
      .left-home{
-        margin-top: 300px;
+        margin-top: 450px;
         margin-left: 0px;
 
      }
@@ -643,19 +683,28 @@ i.fa-x{
      
      .about{
         width: 300px;
+        margin-top: 20vh;
      }
      .services-list1 {
-        height: 250px;
-        width: 288px;
+        height: 500px;
+        width: 450px;
+     }
+     .services-list1 img{
+        width: 400px;
+     }
+     .services-list2 img{
+        width: 400px;
      }
      .services-list2 {
-        height: 250px;
-        width: 288px;
+        height: 500px;
+        width: 450px;
+        padding: 0px;
      }
      footer{
         margin-left: 0px;
-        text-align: center;
         width: 100%;
+        font-size: 12px;
+        padding-left: 0px;
      }
     
      
@@ -685,10 +734,22 @@ i.fa-x{
      .home{
         margin-top: 50px;
      }
+     .services-list2 h2{
+        margin-top: 3px;
     
     
      }
+     .services-list1 h2{
+        margin-top: 3px;
+     }
+     .services{
+        margin-top: 100px;
+     }
+     .left-home i{
+        padding-left: 0;
+     }
+     
     
     
-        
+    }
     
