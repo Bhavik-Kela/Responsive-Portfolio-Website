@@ -15,14 +15,21 @@ function opentab(tabname) {
 
 // Mobile menu functionality
 let sidemenu = document.getElementById("sidemenu");
+let openBtn = document.getElementById("open-btn");
+let closeBtn = document.getElementById("close-btn");
 
 function openmenu() {
     sidemenu.classList.add("active");
+    openBtn.style.display = "none";
+    closeBtn.style.display = "block";
 }
 
 function closemenu() {
     sidemenu.classList.remove("active");
+    openBtn.style.display = "block";
+    closeBtn.style.display = "none";
 }
+
 
 // Close menu when clicking on a link
 const links = sidemenu.querySelectorAll('a');

@@ -952,6 +952,10 @@ footer {
         top: 20px;
         right: 20px;
     }
+    
+    #close-btn {
+        display: none;
+    }
 
     .section-title {
         font-size: 2rem;
