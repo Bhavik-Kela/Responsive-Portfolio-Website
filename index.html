@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhavik Kela | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <p><span>B</span>havik.</p>
+            </div>
+            
+                <div class="navbar">
+                    <div class="logo">
+                        <p><span>B</span>havik.</p>
+                    </div>
+                    <div class="rightsection" id="sidemenu">
+                        <p class="links present-link" id="home-link"><a href="#hero">Home</a></p>
+                        <p class="links" id="about-link"><a href="#about">About</a></p>
+                        <p class="links" id="skills-link"><a href="#skills-section">Skills</a></p>
+                        <p class="links" id="certificates-link"><a href="#certificates">Certificates</a></p>
+                        <p class="links" id="portfolio-link"><a href="#portfolio">Portfolio</a></p>
+                        <p class="links" id="contact-link"><a href="#contact">Contact</a></p>
+                        <i class="fa-solid fa-x menu-icons" onclick="closemenu()"></i>
+                    </div>
+                    <i class="fa-solid fa-bars menu-icons" onclick="openmenu()"></i>
+                </div>
+        
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Web Developer</h1>
+                    <h3>Hi, I am Bhavik Kela</h3>
+                    <h3 class="country">From <span>In</span>di<span>a</span></h3>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/bhavik_kela/?theme=dark" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/bhavik-kela-678500322/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.github.com/Bhavik-Kela" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Replace with your image path -->
+                    <img src="self.jpg" alt="Bhavik Kela">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <!-- Replace with your image path -->
+                    <img src="bhavik-2.jpg" height="300px" alt="About Bhavik">
+                </div>
+                <div class="about-text">
+                    <h2>My Journey</h2>
+                    <p>As a passionate web developer, I thrive on transforming ideas into dynamic digital experiences. 
+                       With a strong foundation in HTML, CSS, and JavaScript, I enjoy crafting responsive, user-friendly 
+                       websites that not only look great but also function seamlessly.</p>
+                    <p>I am continually exploring new technologies and frameworks to enhance my skill set. 
+                       My goal is to create innovative solutions that meet user needs while pushing the boundaries
+                       of what's possible on the web.</p>
+
+                    <div class="tabs">
+                        <div class="tab-links active-link" onclick="opentab('skills')">Skills</div>
+                        <div class="tab-links" onclick="opentab('experience')">Experience</div>
+                        <div class="tab-links" onclick="opentab('education')">Education</div>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            
+                            <li><span>Programming Languages</span>
+                                JavaScript, C Programming
+                                <!-- Add more programming languages here -->
+                            </li>
+                            <li><span>Tools & Technologies</span>
+                                Git, GitHub, VS Code
+                                <!-- Add more tools here -->
+                            </li>
+
+                            <li><span>Soft Skills</span>
+                                Event Management
+                                <!-- Add more tools here -->
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024 September - December 2024</span>
+                                Technical Team Member at Coding Ninja's Club
+                                <!-- Add responsibilities here -->
+                            </li>
+                            <li><span>2025 Jan - Present</span>
+                                Onboarding member at Liftoff
+                                <!-- Add responsibilities here -->
+                            </li>
+                            <!-- Add more experience here -->
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Bachelor's in Electronics and Computer Engineering</span>
+                                SRM Institute of Technology, KTR
+                                <!-- Add graduation year here -->
+                            </li>
+                            <li><span>School Education</span>
+                                The Indian Public School - 1st to 12th
+                                <!-- Add graduation year here -->
+                            </li>
+                            <!-- Add more education here -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills-section">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-content">
+                <!-- HTML Skill -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <h3 class="skill-title">HTML5</h3>
+                    <p>Proficient in creating well-structured, semantic markup for modern web applications.</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+
+                <!-- CSS Skill -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-css3-alt"></i>
+                    </div>
+                    <h3 class="skill-title">CSS3</h3>
+                    <p>Strong understanding of styling, animations, and responsive design principles.</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+
+                <!-- JavaScript Skill -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-js"></i>
+                    </div>
+                    <h3 class="skill-title">JavaScript</h3>
+                    <p>Experience in creating interactive web elements and dynamic content.</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+
+                <!-- C Programming Skill -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="skill-title">C Programming</h3>
+                    <p>Solid understanding of programming fundamentals and algorithm development.</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+
+        
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-node"></i>
+                    </div>
+                    <h3 class="skill-title">Node Js + Express Js</h3>
+                    <p>Experience with backend and API routing</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                
+                    </div>
+                    <h3 class="skill-title">Event Management</h3>
+                    <p>Have been an organizer </p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates">
+        <div class="container">
+            <h2 class="section-title">My Certificates</h2>
+            
+            <div class="certificates-gallery">
+                <!-- Certificate 1 -->
+                <div class="certificate-item">
+                    <div class="certificate-image">
+                        <img src="html and css.jpg" alt="HTML and CSS Certificate">
+                        <div class="certificate-overlay">
+                            <h3 class="certificate-title">HTML and CSS</h3>
+                            <p class="certificate-desc">Certification in web development fundamentals focusing on creating and styling web pages. This certification validates my skills in building responsive and visually appealing websites.</p>
+                        </div>
+                    </div>
+                    <div class="certificate-info-bar">
+                        <span class="certificate-name">HTML & CSS</span>
+                        <a href="#" class="view-certificate">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Certificate 2 -->
+                <div class="certificate-item">
+                    <div class="certificate-image">
+                        <img src="c programming.jpg" alt="C Programming Certificate">
+                        <div class="certificate-overlay">
+                            <h3 class="certificate-title">C Programming</h3>
+                            <p class="certificate-desc">Comprehensive certification in C programming language and algorithm development. This certification demonstrates my proficiency in creating efficient and optimized code solutions.</p>
+                        </div>
+                    </div>
+                    <div class="certificate-info-bar">
+                        <span class="certificate-name">C Programming</span>
+                        <a href="#" class="view-certificate">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Certificate 3 -->
+                <div class="certificate-item">
+                    <div class="certificate-image">
+                        <img src="Ultron hackathon.jpg" alt="Ultron 8.0 Certificate">
+                        <div class="certificate-overlay">
+                            <h3 class="certificate-title">Participation Certificate - Ultron 8.0</h3>
+                            <p class="certificate-desc">Worked on "SafePath", a women safety website project during this hackathon. The project focused on providing safety solutions through innovative technology.</p>
+                        </div>
+                    </div>
+                    <div class="certificate-info-bar">
+                        <span class="certificate-name">Ultron 8.0</span>
+                        <a href="#" class="view-certificate">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Certificate 4 -->
+                <div class="certificate-item">
+                    <div class="certificate-image">
+                        <img src="event-manag.jpg" alt="Innovatrix Certificate">
+                        <div class="certificate-overlay">
+                            <h3 class="certificate-title">Innovatrix</h3>
+                            <p class="certificate-desc">Served as an organizer in this hackathon. Gained valuable experience in event management, team coordination, and technical problem solving.</p>
+                        </div>
+                    </div>
+                    <div class="certificate-info-bar">
+                        <span class="certificate-name">Innovatrix</span>
+                        <a href="#" class="view-certificate">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="section-title">My Portfolio</h2>
+            <div class="portfolio-content">
+                <!-- Project 1: Weather App -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="WhatsApp Image 2024-10-25 at 13.02.42_d448c14d.jpg" alt="Weather App">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Weather App</h3>
+                        <p>A weather app (website) which uses an API to fetch data from openweathermap and displays data when you hit the search button. Features a responsive layout.</p>
+                        <a href="https://github.com/Bhavik-Kela/Weather-App" class="portfolio-link" target="_blank">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Tic Tac Toe Game -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="Screenshot 2024-10-26 161125.png" alt="Tic Tac Toe Game">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Tic Tac Toe Game</h3>
+                        <p>A classic game built using JavaScript with engaging interactivity and clean styling.</p>
+                        <a href="https://github.com/Bhavik-Kela/Tic-Tac-Toe-Game" class="portfolio-link" target="_blank">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+    <div class="portfolio-container">
+        <!-- Portfolio Item with Video - Fixed Structure -->
+        <div class="portfolio-item">
+            <div class="portfolio-image">
+                <!-- FIXED: Proper video tag with controls and appropriate attributes -->
+                <video src="scraper.mp4" controls autoplay muted loop></video>
+            </div>
+            <div class="portfolio-overlay">
+                <h3>Scraper</h3>
+                <p>A Website which scrapes the student details from the official college website and returns the data with a good UI</p>
+                <a href="https://github.com/Bhavik-Kela/Scraper" class="portfolio-link" target="_blank">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+                </div>
+                </div>
+                </section>
+
+                <section id="contact">
+                    <div class="container">
+                        <h2 class="section-title">Contact Me</h2>
+                        
+                        <div class="contact-content">
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <div>
+                                        <h3>Email</h3>
+                                        <p>bhavik.kelaa@gmail.com</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <div>
+                                        <h3>Phone</h3>
+                                        <p>+91 9082771408</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div>
+                                        <h3>Location</h3>
+                                        <p>Chennai, India</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                           
+                        </div>
+                    </div>
+                </section>
+                
+                
+                <!-- Footer -->
+                <footer>
+                    <div class="container">
+                        <p>&copy; 2025 Bhavik Kela. All rights reserved.</p>
+                    </div>
+                </footer>
+            
+
+                <script src="script.js"></script>
+                </body>
+                
+                </html>
+
+        
