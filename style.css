@@ -159,7 +159,6 @@ section {
 .social-icons {
     display: flex;
     gap: 60px;
-    justify-content: center;
     padding-top: 40px;
     
 }
