@@ -65,19 +65,13 @@ window.addEventListener('scroll', function() {
         }
     });
     
-    // Special case for skills section which has a different ID
-    if (current === 'skills-section') {
-        current = 'skills';
-    }
-    
+
     navLinks.forEach(link => {
         link.classList.remove('present-link');
         const href = link.querySelector('a').getAttribute('href').substring(1);
         
         // Compare link href with current section ID
-        if (href === current || 
-            (href === 'hero' && current === '') || 
-            (href === 'skills' && current === 'skills-section')) {
+        if (href === current ) {
             link.classList.add('present-link');
         }
     });

@@ -8,16 +8,24 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100%;
+    position: relative;
 }
 
 body {
     background-color: #0a0a0a;
     color: #f5f5f5;
     line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100%;
+    position: relative;
 }
 
 section {
     padding: 80px 0;
+    width: 100%;
+    overflow: hidden;
 }
 
 .container {
@@ -54,7 +62,7 @@ section {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 999;
     transition: all 0.3s ease;
     background-color: rgba(10, 10, 10, 0.95);
 }
@@ -111,6 +119,7 @@ section {
     position: relative;
     overflow: hidden;
     padding-top: 80px;
+    padding-top: 100px !important; 
 }
 
 .hero-content {
@@ -295,6 +304,8 @@ section {
     padding: 25px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    width: 100%;
 }
 
 .skill-card:hover {
@@ -661,6 +672,8 @@ section {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     transition: all 0.3s ease;
+    max-width: 100%;
+    word-break: break-word;
 }
 
 .contact-item:hover {
@@ -687,202 +700,6 @@ section {
     font-size: 16px;
 }
 
-#contactForm {
-    flex-basis: 60%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-#contactForm input, #contactForm textarea {
-    width: 100%;
-    padding: 15px;
-    font-size: 16px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 6px;
-    color: #fff;
-    transition: all 0.3s ease;
-    box-sizing: border-box;
-}
-
-#contactForm input:focus, #contactForm textarea:focus {
-    outline: none;
-    border-color: #6a9dff;
-    background: rgba(255, 255, 255, 0.1);
-}
-
-#contactForm textarea {
-    resize: vertical;
-    min-height: 150px;
-}
-
-.submit-btn {
-    display: inline-block;
-    padding: 15px 40px;
-    background: #6a9dff;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 10px;
-    align-self: flex-start;
-}
-
-.submit-btn:hover {
-    background: #4a85ff;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(74, 133, 255, 0.4);
-}
-
-/* Loader styles */
-.loader {
-    display: none;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.loader-spinner {
-    border: 4px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    border-top: 4px solid #6a9dff;
-    width: 40px;
-    height: 40px;
-    animation: spin 1s linear infinite;
-    margin: 0 auto;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* Message styles */
-.success-message {
-    display: none;
-    margin-top: 20px;
-    padding: 18px 20px;
-    background: rgba(76, 175, 80, 0.2);
-    color: #4CAF50;
-    border-radius: 8px;
-    text-align: center;
-    animation: fadeInUp 0.5s ease forwards;
-    border-left: 4px solid #4CAF50;
-    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.15);
-    font-weight: 500;
-    position: relative;
-    z-index: 100;
-}
-
-.success-message::before {
-    content: '✓';
-    display: inline-block;
-    margin-right: 8px;
-    font-weight: bold;
-}
-
-.error-message {
-    display: none;
-    margin-top: 20px;
-    padding: 18px 20px;
-    background: rgba(244, 67, 54, 0.2);
-    color: #F44336;
-    border-radius: 8px;
-    text-align: center;
-    animation: fadeInUp 0.5s ease forwards;
-    border-left: 4px solid #F44336;
-    box-shadow: 0 4px 15px rgba(244, 67, 54, 0.15);
-    font-weight: 500;
-}
-
-.error-message::before {
-    content: '!';
-    display: inline-block;
-    margin-right: 8px;
-    font-weight: bold;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Add blur overlay for the success message effect */
-.blur-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(5px);
-    background-color: rgba(0, 0, 0, 0.2);
-    z-index: 99;
-    animation: fadeIn 0.3s ease forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-/* Admin panel styles */
-.admin-panel {
-    margin-top: 40px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-}
-
-.admin-btn {
-    background-color: #6a9dff;
-    margin-bottom: 10px;
-    padding: 15px 30px;
-    border-radius: 6px;
-    border: none;
-    color: #fff;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.admin-btn:hover {
-    background-color: #4a85ff;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(74, 133, 255, 0.4);
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-    color: #fff;
-}
-
-th, td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-th {
-    background-color: rgba(255, 255, 255, 0.05);
-    color: #6a9dff;
-}
 
 /* Footer Styles */
 footer {
@@ -891,42 +708,238 @@ footer {
     text-align: center;
     padding: 30px 0;
     font-size: 14px;
+    width: 100% !important;
+    position: relative;
+    padding: 30px 15px;
+
 }
 
-/* Responsive Styles */
-@media (max-width: 992px) {
-    .about-content {
-        grid-template-columns: 1fr;
-    }
+/* Responsive Styles - Comprehensive Approach */
 
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .hero-text h1 {
+        font-size: 4rem;
+    }
+    
+    .hero-text h3 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 3rem;
+    }
+}
+
+/* Large Devices (desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Medium Devices (laptops and tablets, 992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.8rem;
+    }
+    
+    .hero-text h3 {
+        font-size: 1.6rem;
+    }
+    
+    .section-title {
+        font-size: 2.3rem;
+        margin-bottom: 50px;
+    }
+    
+    .portfolio-content, 
+    .certificates-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+/* Small Devices (tablets, 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .navbar {
+        padding: 15px 25px;
+    }
+    
+    .hero {
+        padding-top: 90px; /* Ensure hero content doesn't hide behind navbar */
+    }
+    
     .hero-content {
         flex-direction: column;
         text-align: center;
     }
-
+    
     .hero-text {
         padding-right: 0;
         margin-bottom: 40px;
     }
-
+    
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-text h3 {
+        font-size: 1.5rem;
+    }
+    
     .social-icons {
         justify-content: center;
     }
-
-    .certificates-content {
+    
+    .about-content {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+    
+    .section-title:after {
+        width: 70px;
+    }
+    
+    .portfolio-content, 
+    .certificates-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .skills-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .contact-content {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    .contact-info {
+        flex-basis: 100%;
+        width: 100%;
+    }
+    
+    #contact {
+        padding-bottom: 50px;
+    }
+    
+    footer {
+        padding: 25px 15px;
     }
 }
 
-@media (max-width: 768px) {
-    .navbar {
-        padding: 15px 20px;
+/* Extra Small Devices (phones, 576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .container {
+        max-width: 540px;
     }
-
+    
+    .navbar {
+        padding: 15px;
+    }
+    
+    .logo p {
+        font-size: 1.7rem;
+    }
+    
+    .hero {
+        padding-top: 90px; /* Increased to prevent content hiding behind navbar */
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.3rem;
+    }
+    
+    .hero-text h3 {
+        font-size: 1.4rem;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 35px;
+    }
+    
+    .section-title:after {
+        width: 60px;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    .portfolio-content, 
+    .certificates-gallery {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .portfolio-item,
+    .certificate-item {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .skills-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .skill-card {
+        max-width: 400px;
+        margin: 0 auto 20px;
+    }
+    
+    .tab-links {
+        padding: 8px 15px;
+        font-size: 1rem;
+    }
+    
+    /* Navigation menu for mobile */
     .rightsection {
         position: fixed;
         top: 0;
-        right: -100%;
+        right: -250px;
         width: 250px;
         height: 100vh;
         background-color: #1a1a1a;
@@ -936,78 +949,544 @@ footer {
         gap: 40px;
         transition: right 0.3s ease;
         z-index: 1001;
+        padding-top: 50px;
     }
-
+    
     .rightsection.active {
         right: 0;
     }
-
+    
     .menu-icons {
         display: block;
         z-index: 1002;
     }
-
+    
+    .links {
+        margin: 15px 0;
+    }
+    
     .fa-x {
         position: absolute;
         top: 20px;
         right: 20px;
     }
     
-    #close-btn {
-        display: none;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .portfolio-content {
-        grid-template-columns: 1fr;
-    }
-
-    .skill-card {
-        margin-bottom: 20px;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .menu-icons {
-        display: none !important;
-    }
-}
-
-/* Show menu icons only on mobile */
-@media screen and (max-width: 767px) {
-    .menu-icons {
-        display: block;
-        cursor: pointer;
-        font-size: 24px;
+    .contact-content {
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+        padding: 0 15px;
     }
     
+    .contact-info {
+        flex-basis: 100%;
+        width: 100%;
+    }
+    
+    #contact {
+        padding-bottom: 40px;
+    }
+}
+
+/* Very Small Devices (small phones, less than 576px) */
+@media (max-width: 575px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .navbar {
+        padding: 12px 15px;
+    }
+    
+    .logo p {
+        font-size: 1.5rem;
+    }
+    
+    .hero {
+        padding-top: 80px; /* Increased to prevent content hiding behind navbar */
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text {
+        padding-right: 0;
+        margin-bottom: 25px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-text h3 {
+        font-size: 1.2rem;
+    }
+    
+    .social-icons {
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .social-icons a {
+        font-size: 1.5rem;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    
+    .section-title:after {
+        width: 50px;
+        height: 3px;
+    }
+    
+    section {
+        padding: 50px 0;
+    }
+    
+    .about-text h2 {
+        font-size: 1.8rem;
+    }
+    
+    .about-text p {
+        font-size: 1rem;
+    }
+    
+    .tabs {
+        flex-wrap: wrap;
+    }
+    
+    .tab-links {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .portfolio-content, 
+    .certificates-gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .certificates-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio-image,
+    .certificate-image {
+        height: 200px;
+    }
+    
+    .portfolio-overlay h3 {
+        font-size: 1.3rem;
+    }
+    
+    .certificate-title {
+        font-size: 1.3rem;
+    }
+    
+    .skills-content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .skill-title {
+        font-size: 1.2rem;
+    }
+    
+    .skill-icon {
+        font-size: 2rem;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    /* Navigation menu for mobile */
     .rightsection {
         position: fixed;
         top: 0;
-        right: -200px;
-        width: 200px;
+        right: -100%;
+        width: 100%;
         height: 100vh;
-        background: #333;
+        background-color: rgba(10, 10, 10, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transition: right 0.3s ease;
+        z-index: 1001;
         padding-top: 50px;
-        z-index: 100;
-        transition: right 0.5s ease;
     }
     
     .rightsection.active {
         right: 0;
     }
     
-    .rightsection .links {
+    .menu-icons {
         display: block;
-        margin: 25px;
+        z-index: 1002;
+        font-size: 1.3rem;
+    }
+    
+    .links {
+        margin: 12px 0;
+    }
+    
+    .links a {
+        font-size: 1.1rem;
     }
     
     .fa-x {
         position: absolute;
-        top: 25px;
-        right: 25px;
+        top: 15px;
+        right: 20px;
+    }
+    
+    .contact-content {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    .contact-info {
+        flex-basis: 100%;
+        width: 100%;
+    }
+    
+    #contact {
+        padding-bottom: 30px;
+    }
+    
+    .contact-item {
+        padding: 15px;
+        gap: 10px;
+    }
+    
+    .contact-item i {
+        font-size: 20px;
+    }
+    
+    .contact-item h3 {
+        font-size: 16px;
+    }
+    
+    .contact-item p {
+        font-size: 14px;
+    }
+}
+
+/* Tiny Devices (very small phones, less than 400px) */
+@media (max-width: 399px) {
+    .navbar {
+        padding: 10px 12px;
+    }
+    
+    .logo p {
+        font-size: 1.3rem;
+    }
+    
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-text h3 {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .about-text h2 {
+        font-size: 1.6rem;
+    }
+    
+    .tab-links {
+        padding: 5px 10px;
+        font-size: 0.85rem;
+    }
+    
+    .portfolio-image,
+    .certificate-image {
+        height: 180px;
+    }
+    
+    .certificate-info-bar {
+        padding: 10px 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+/* Fix for menu visibility on tablet and desktop */
+@media screen and (min-width: 768px) {
+    .rightsection {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        flex-direction: row;
+        padding-top: 0;
+    }
+    
+    .menu-icons {
+        display: none !important;
+    }
+    
+    .links {
+        margin: 0;
+    }
+}
+
+/* Landscape mode fixes */
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 100px 0 50px;
+    }
+    
+    .hero-content {
+        flex-direction: row;
+    }
+    
+    .hero-text,
+    .hero-image {
+        flex: 1;
+    }
+    
+    .hero-image img {
+        max-height: 70vh;
+    }
+    
+    /* Navigation menu in landscape */
+    .rightsection.active {
+        padding-top: 70px;
+    }
+    
+    .links {
+        margin: 10px 0;
+    }
+    
+    /* Fix for contact section in landscape */
+    #contact {
+        padding-bottom: 30px;
+    }
+    
+    .contact-content {
+        gap: 20px;
+        margin-top: 30px;
+    }
+    
+    .contact-item {
+        padding: 15px;
+    }
+}
+
+/* Print styles for better printing */
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+    
+    .navbar, 
+    .social-icons,
+    .portfolio-link,
+    .btn,
+    footer {
+        display: none;
+    }
+    
+    section {
+        padding: 20px 0;
+        page-break-inside: avoid;
+    }
+    
+    .container {
+        max-width: 100%;
+    }
+}
+/* Fixes for Contact Form and Footer on Mobile Devices */
+
+/* General fixes for all devices */
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100%;
+    position: relative;
+}
+
+section {
+    width: 100%;
+    overflow: hidden; /* Ensure content doesn't spill out */
+}
+
+#contact, footer {
+    display: block !important; /* Force display of contact section and footer */
+    visibility: visible !important;
+    position: relative;
+    z-index: 1; /* Ensure proper stacking */
+}
+
+/* Fix for hero section being cut in half on tablets */
+.hero {
+    min-height: 100vh;
+    height: auto; /* Allow content to determine height */
+    display: flex;
+    align-items: center;
+    overflow: visible;
+    padding-bottom: 30px; /* Add some bottom padding */
+}
+
+/* Extra Small Devices (phones, less than 576px) */
+@media (max-width: 575px) {
+    /* Fix for contact form and footer */
+    #contact {
+        padding: 50px 0 30px;
+        width: 100%;
+        overflow: visible;
+        display: block !important;
+    }
+    
+    .contact-content {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    
+    footer {
+        padding: 20px 15px;
+        width: 100%;
+        overflow: visible;
+        display: block !important;
+    }
+    
+    /* Hero fixes for very small screens */
+    .hero {
+        padding-top: 80px;
+        padding-bottom: 30px;
+    }
+    
+    .hero-image img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Small Devices (tablets, 576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    #contact {
+        padding: 60px 0 40px;
+        width: 100%;
+        overflow: visible;
+        display: block !important;
+    }
+    
+    footer {
+        padding: 25px 15px; 
+        width: 100%;
+        display: block !important;
+    }
+}
+
+/* Medium Devices (iPad Mini, iPad Air, etc., 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Fix for hero section being cut in half */
+    .hero {
+        min-height: auto;
+        height: auto;
+        padding: 100px 0 50px;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    #contact {
+        padding: 60px 0 50px;
+        width: 100%;
+        display: block !important;
+    }
+    
+    footer {
+        padding: 25px 20px;
+        width: 100%;
+        display: block !important;
+    }
+}
+
+/* Fix for iPad Pro and Surface Pro */
+@media (min-width: 992px) and (max-width: 1199px) {
+    #contact, footer {
+        width: 100%;
+        display: block !important;
+    }
+}
+
+/* Fix for Galaxy Fold and other foldable devices */
+@media (max-width: 399px) {
+    .hero {
+        padding-top: 70px;
+        padding-bottom: 30px;
+    }
+    
+    #contact {
+        padding: 40px 0 25px;
+    }
+    
+    .contact-form .form-control {
+        padding: 10px;
+    }
+    
+    footer {
+        padding: 15px 10px;
+    }
+}
+
+/* Landscape mode fixes for mobile devices */
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero {
+        padding: 80px 0 30px;
+    }
+    
+    #contact {
+        padding: 30px 0 20px;
+    }
+    
+    footer {
+        padding: 15px;
+    }
+}
+
+/* Fixes for foldable devices in folded state */
+@media (max-width: 320px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .hero {
+        padding-top: 60px;
+    }
+    
+    #contact {
+        padding: 30px 0 20px;
+    }
+    
+    footer {
+        padding: 12px 10px;
     }
 }
